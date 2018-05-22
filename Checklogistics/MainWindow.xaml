@@ -7,6 +7,33 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
         
+        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
+            <TextBlock Text="第一步" HorizontalAlignment="Center" FontSize="15"></TextBlock>
+            <Button Content="导入原excel" FontSize="15" Margin="0,5,0,0" Name="Bt_ImportOrigin" Click="Bt_ImportOrigin_OnClick"></Button>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
+            <TextBlock Text="第二步" HorizontalAlignment="Center" FontSize="15"></TextBlock>
+            <Button Content="开始生成报表" IsEnabled="False" FontSize="15" Margin="0,5,0,0" Name="Bt_StartCheck" Click="Bt_StartCheck_OnClick"></Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
+            <TextBlock Text="第三步" HorizontalAlignment="Center" FontSize="15"></TextBlock>
+            <Button Content="导出报表" IsEnabled="False" FontSize="15" Margin="0,5,0,0" Name="Bt_Export" Click="Bt_Export_OnClick"></Button>
+        </StackPanel>
+        
+        
+        <TextBlock Name="Hint" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Text="请执行第一步" FontSize="35"></TextBlock>
+
     </Grid>
 </Window>
